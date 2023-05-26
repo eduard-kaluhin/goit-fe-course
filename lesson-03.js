@@ -85,30 +85,30 @@
 // console.log(min); // 1
 // ```
 
-const numbers = [5, 10, 15, 20, 25];
+
 
 // Оголошення функції
-const historyService = {
-  orders: [
-    { email: "jacob@hotmail.com", dish: "Burrito" },
-    { email: "solomon@topmail.net", dish: "Burger" },
-    { email: "artemis@coldmail.net", dish: "Pizza" },
-    { email: "solomon@topmail.net", dish: "Apple pie" },
-    { email: "jacob@hotmail.com", dish: "Taco" },
-  ],
-  // Change code below this line
-  getOrdersLog() {
-    return this.orders
-      .map(order => `email: ${order.email} dish: ${order.dish}`)
-      .join(" - ");
-  },
-  getEmails() {
-    const emails = this.orders.map(order => order.email);
-    const uniqueEmails = new Set(emails);
-    return [...uniqueEmails];
-  },
-  getOrdersByEmail(email) {
-    return this.orders.filter(order => order.email === email);
-  },
-  // Change code above this line
-};
+// const listWithId = document.querySelector('#menu');
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// console.log(listWithId);
+
+// const listWithClass = document.querySelector('.menu');
+// console.log(listWithClass);
+
+// const menuItemsByTagName = document.querySelectorAll("li");
+// console.log(menuItemsByTagName);
+
+// const menuItemsByClass = document.querySelectorAll(".menu-item");
+// console.log(menuItemsByClass);
+
+// const firstMenuItem = document.querySelector(".menu-item");
+// firstMenuItem.style.color = 'tomato';
+// console.log(firstMenuItem);
+const output = document.querySelector(".output");
+let scrollEventCounter = 0;
+
+document.addEventListener("scroll", () => {
+  scrollEventCounter +=  1;
+  output.textContent = scrollEventCounter;
+});
